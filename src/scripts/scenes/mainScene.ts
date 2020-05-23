@@ -94,6 +94,7 @@ export default class MainScene extends Phaser.Scene {
 
     //create bunny, add bounds, and set hitbox to more appropriate size
     this.bunny = this.physics.add.sprite(200, 200, "Bun");
+    this.bunny.setScale(2, 2);
     this.bunny.setCollideWorldBounds(true);
     this.bunny.body.setSize(30, 48, true);
 
@@ -103,7 +104,7 @@ export default class MainScene extends Phaser.Scene {
     //bunny hop left animation
     this.anims.create({
       key: "bunHopL",
-      frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 3 }),
+      frames: this.anims.generateFrameNumbers("Bun", { start: 6, end: 9 }),
       frameRate: 10,
       repeat: -1
     });
@@ -111,7 +112,7 @@ export default class MainScene extends Phaser.Scene {
     //bunny hop right animation
     this.anims.create({
       key: "bunHopR",
-      frames: this.anims.generateFrameNumbers("Bun", { start: 4, end: 7 }),
+      frames: this.anims.generateFrameNumbers("Bun", { start: 2, end: 5 }),
       frameRate: 10,
       repeat: -1
     });
@@ -119,7 +120,7 @@ export default class MainScene extends Phaser.Scene {
     //Bunny sits facing left
     this.anims.create({
       key: "bunHopSL",
-      frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 0 }),
+      frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 1 }),
       frameRate: 10,
       repeat: 0
     });
@@ -127,7 +128,7 @@ export default class MainScene extends Phaser.Scene {
     //Bunny sits facing right
     this.anims.create({
       key: "bunHopSR",
-      frames: this.anims.generateFrameNumbers("Bun", { start: 7, end: 7 }),
+      frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 1 }),
       frameRate: 10,
       repeat: 0
     });

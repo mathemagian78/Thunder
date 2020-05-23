@@ -11,15 +11,15 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.bitmapFont("letters", "assets/font.png", "assets/font.xml");
 
     //add bunny sprite
-    this.load.spritesheet("Bun", "assets/bunny-hop-spritesheet.png", {
-      frameWidth: 48,
+    this.load.spritesheet("Bun", "assets/Thunder.png", {
+      frameWidth: 32,
       frameHeight: 32
     });
 
     //add fox sprite
-    this.load.spritesheet("Fox", "assets/fox-SWEN-bright.png", {
-      frameWidth: 50,
-      frameHeight: 75
+    this.load.spritesheet("Fox", "assets/Celery.png", {
+      frameWidth: 32,
+      frameHeight: 32
     });
 
     //add carrot image
