@@ -48,8 +48,13 @@ export default class MainScene extends Phaser.Scene {
   private popSound;
   //sound upon win
   private winSound;
+  //barking
+  private barks;
+
+
   //button to room
   private button;
+
   
 
   constructor() {
@@ -67,7 +72,9 @@ export default class MainScene extends Phaser.Scene {
     this.warpSound = this.sound.add("warp");
     this.popSound = this.sound.add("pop");
     this.winSound = this.sound.add("winner");
-    this.carrotmusic = this.sound.add("bell");
+    this.carrotmusic = this.sound.add("bark");
+    this.barks = this.sound.add("barks");
+    this.barks.play();
     //music config for background music
     var musicConfig = {
       mute: false,

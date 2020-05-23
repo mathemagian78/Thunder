@@ -56,11 +56,13 @@ export default class PreloadScene extends Phaser.Scene {
     });
 
     //add musics and sound effects
-    this.load.audio("music", "assets/music.mp3");
+    this.load.audio("music", "assets/carrotChase.wav");
     this.load.audio("winner", "assets/win.wav");
     this.load.audio("bell", "assets/pleasing-bell.wav");
     this.load.audio("warp", "assets/wave.wav");
     this.load.audio("pop", "assets/pop.ogg");
+    this.load.audio("barks", "assets/thunderbark.wav");
+    this.load.audio("bark", "assets/oneBark.wav");
   }
 
   create() {

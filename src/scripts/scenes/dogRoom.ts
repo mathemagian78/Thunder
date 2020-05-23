@@ -48,7 +48,7 @@ export default class dogRoom extends Phaser.Scene {
     }
 
     toRoom(){
-        this.scene.bringToTop("mainScene");
+        this.scene.launch("mainScene");
         this.scene.sleep("dogRoom");
         this.scene.wake("mainScene");
     }
