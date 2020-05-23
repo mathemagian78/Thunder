@@ -6,17 +6,23 @@ export default class PreloadScene extends Phaser.Scene {
   preload() {
     //add background 
     this.load.image("background", "assets/environment_forest_alt1.png");
+    //add ThunderRoom bg
+    this.load.image("Room", "assets/Room.png");
+    //add button to ThunderRoom
+    this.load.image("toRoom", "assets/roomButton.png")
+    //add button to carrot game
+    this.load.image("carrotTime", "assets/carrotTime.png")
 
     //add text font
     this.load.bitmapFont("letters", "assets/font.png", "assets/font.xml");
 
-    //add bunny sprite
-    this.load.spritesheet("Bun", "assets/Thunder.png", {
+    //add Thunder sprite
+    this.load.spritesheet("Bun", "assets/Thunder2.png", {
       frameWidth: 32,
       frameHeight: 32
     });
 
-    //add fox sprite
+    //add Celery sprite
     this.load.spritesheet("Fox", "assets/Celery.png", {
       frameWidth: 32,
       frameHeight: 32
@@ -62,5 +68,8 @@ export default class PreloadScene extends Phaser.Scene {
     this.add.text(20, 20, "Working on it!!!");
     //start the game
     this.scene.start('MainScene');
+    this.scene.start("dogRoom");
+    this.scene.sleep("dogRoom");
+    this.scene.bringToTop("MainScene");
   }
 }

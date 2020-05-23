@@ -48,6 +48,8 @@ export default class MainScene extends Phaser.Scene {
   private popSound;
   //sound upon win
   private winSound;
+  //button to room
+  private button;
   
 
   constructor() {
@@ -122,7 +124,7 @@ export default class MainScene extends Phaser.Scene {
       key: "bunHopSL",
       frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 1 }),
       frameRate: 10,
-      repeat: 0
+      repeat: -1
     });
 
     //Bunny sits facing right
@@ -130,7 +132,7 @@ export default class MainScene extends Phaser.Scene {
       key: "bunHopSR",
       frames: this.anims.generateFrameNumbers("Bun", { start: 0, end: 1 }),
       frameRate: 10,
-      repeat: 0
+      repeat: -1
     });
 
     //fox running animation
@@ -222,6 +224,13 @@ export default class MainScene extends Phaser.Scene {
 
     //Add arrow keys plus space and shift
     this.cursorKeys = this.input.keyboard.createCursorKeys();
+
+    this.button = this.add.image(50, 50, "toRoom");
+    this.button.setScale(0.2, 0.2);
+    this.button.setInteractive({ useHandCursor: true })
+    .on('pointerdown', () => this.toRoom());
+
+    
   }
 
 
@@ -419,6 +428,13 @@ export default class MainScene extends Phaser.Scene {
       callbackScope: this,
       loop: false
     });
+  }
+
+
+  toRoom(){
+    this.scene.bringToTop("dogRoom");
+    this.scene.sleep("mainScene");
+    this.scene.wake("dogRoom");
   }
 
   //Move player
