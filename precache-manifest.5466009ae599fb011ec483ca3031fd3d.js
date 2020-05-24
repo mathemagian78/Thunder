@@ -60,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/fox-SWEN-bright.png"
   },
   {
+    "revision": "f38d7c246c961ee84fd2fc51147ac837",
+    "url": "assets/frisbee.png"
+  },
+  {
     "revision": "5c5eb626426eb420f3e5f4ca68c4cfb0",
     "url": "assets/grass.png"
   },
@@ -74,6 +78,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c17c1515edf3260716c7812c638e3cb",
     "url": "assets/pa2.png"
+  },
+  {
+    "revision": "59c0357f84d90e4bb344e5a8a591d917",
+    "url": "assets/park.png"
+  },
+  {
+    "revision": "6814569ed4dcefaba2ed40a5e803782a",
+    "url": "assets/parkButton.png"
   },
   {
     "revision": "e0d390c783f610d638e5c34e8005772c",
@@ -108,12 +120,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "assets/win.wav"
   },
   {
-    "revision": "c7ac10dc20d71e805647b636e54b8e53",
+    "revision": "5f947e9e99f3bdf87f8bc0491b113461",
     "url": "index.html"
   },
   {
-    "revision": "cc554ee33ffd9b819e76",
-    "url": "main.cc12d2978503dbd2817a.bundle.js"
+    "revision": "ead644d52075968be3d3",
+    "url": "main.64c2e10d92a01fd72125.bundle.js"
   },
   {
     "revision": "fc8cefcfb102b35601f09d51ee2512ef",
