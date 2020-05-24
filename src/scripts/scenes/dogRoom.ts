@@ -1,7 +1,8 @@
 export default class dogRoom extends Phaser.Scene {
 
     private puppy;
-    private button;
+    private carrotButton;
+    private parkButton;
 
     constructor() {
         super({ key: 'dogRoom' });
@@ -14,12 +15,16 @@ export default class dogRoom extends Phaser.Scene {
         bg.setOrigin(0, 0);
         bg.setScale(2.75, 4);
 
-        this.button = this.add.image(50, 50, "carrotTime");
-    this.button.setScale(0.2, 0.2);
-    this.button.setInteractive({ useHandCursor: true })
-    .on('pointerdown', () => this.toRoom());
+        this.carrotButton = this.add.image(50, 50, "carrotTime");
+        this.carrotButton.setScale(0.2, 0.2);
+        this.carrotButton.setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => this.toCarrots());
 
 
+        this.parkButton = this.add.image(125, 50, "parkButton");
+        this.parkButton.setScale(0.2, 0.2);
+        this.parkButton.setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => this.toPark());
         
 
         this.puppy = this.add.sprite(400, 400, "Bun");
@@ -47,11 +52,16 @@ export default class dogRoom extends Phaser.Scene {
         this.puppy.play("wiggle");
     }
 
-    toRoom(){
-        this.scene.launch("mainScene");
-        this.scene.sleep("dogRoom");
+    toCarrots(){
+        this.scene.bringToTop("mainScene");
         this.scene.wake("mainScene");
+        this.scene.sleep("dogRoom");
     }
 
+    toPark(){
+        this.scene.bringToTop("frisbee");
+        this.scene.wake("frisbee");
+        this.scene.sleep("dogRoom");        
+    }
 
 }

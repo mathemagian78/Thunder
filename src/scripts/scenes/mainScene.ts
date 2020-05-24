@@ -439,9 +439,11 @@ export default class MainScene extends Phaser.Scene {
 
 
   toRoom(){
+    this.scene.restart();
+    this.scene.wake("dogRoom");
     this.scene.bringToTop("dogRoom");
     this.scene.sleep("mainScene");
-    this.scene.wake("dogRoom");
+    
   }
 
   //Move player

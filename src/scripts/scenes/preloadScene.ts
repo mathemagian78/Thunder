@@ -8,10 +8,15 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image("background", "assets/environment_forest_alt1.png");
     //add ThunderRoom bg
     this.load.image("Room", "assets/Room.png");
+    //add park bg
+    this.load.image("park", "assets/park.png");
+
     //add button to ThunderRoom
-    this.load.image("toRoom", "assets/roomButton.png")
+    this.load.image("toRoom", "assets/roomButton.png");
     //add button to carrot game
-    this.load.image("carrotTime", "assets/carrotTime.png")
+    this.load.image("carrotTime", "assets/carrotTime.png");
+    //add button to park
+    this.load.image("parkButton", "assets/parkButton.png");
 
     //add text font
     this.load.bitmapFont("letters", "assets/font.png", "assets/font.xml");
@@ -55,6 +60,12 @@ export default class PreloadScene extends Phaser.Scene {
       frameHeight: 75
     });
 
+    //add frisbee sprite
+    this.load.spritesheet("disc", "assets/frisbee.png", {
+      frameWidth: 32,
+      frameHeight: 32
+    });
+
     //add musics and sound effects
     this.load.audio("music", "assets/carrotChase.wav");
     this.load.audio("winner", "assets/win.wav");
@@ -69,8 +80,10 @@ export default class PreloadScene extends Phaser.Scene {
     //Tell user we're working on it
     this.add.text(20, 20, "Working on it!!!");
     //start the game
-    this.scene.start('MainScene');
-    this.scene.start("dogRoom");
+    this.scene.launch('MainScene');
+    this.scene.launch("dogRoom");
+    this.scene.launch("frisbee");
+    this.scene.sleep("frisbee");
     this.scene.sleep("dogRoom");
     this.scene.bringToTop("MainScene");
   }
