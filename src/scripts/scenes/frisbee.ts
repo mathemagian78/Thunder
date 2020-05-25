@@ -7,6 +7,7 @@ export default class frisbee extends Phaser.Scene {
     private direction;
     private bg;
     private flyer;
+    private isDisk;
 
     constructor() {
         super({ key: 'frisbee' });
@@ -35,7 +36,9 @@ export default class frisbee extends Phaser.Scene {
         var alpha = 1;
         this.bar.fillStyle(color, alpha);
         this.bar.fillRect(32, 32, 25, 0);
-        this.direction = 1;
+        this.direction = 4;
+
+        this.isDisk = false;
         
         //add frisbee animation
         this.anims.create({
@@ -70,20 +73,27 @@ export default class frisbee extends Phaser.Scene {
 
     oscillateStart(){
         if(this.direction == 4){
+            if(this.isDisk == true){
             this.flyer.destroy();
+            this.isDisk = false;
+            }
+            this.direction = 1;
+            this.oscillate();
         }
-        this.direction = 1;
-        this.oscillate();
+
     }
 
     throw(){
+        if(this.isDisk == false){
         this.direction = 3;
         this.flyer = this.add.sprite(460, 250, "disc");
+        this.isDisk = true;
         this.flyer.setScale(2);
         this.flyer.play("spin");
         this.puppy.play("bunHopR");
 
         this.adjustDisc();
+        }
     }
 
 
@@ -117,7 +127,9 @@ export default class frisbee extends Phaser.Scene {
     adjustDisc(){
         if(this.flyer.y <= 415){
         this.flyer.y +=2;
-        this.value -= 0.5;
+        if(this.value >= 10){
+            this.value -= 0.5;
+        }
 
         this.time.addEvent({
             delay: 100,
@@ -131,6 +143,7 @@ export default class frisbee extends Phaser.Scene {
             this.puppy.play("bunHopSL");
             this.direction = 4;
             this.value = 0;
+            this.isDisk = true;
         }
     }
 
