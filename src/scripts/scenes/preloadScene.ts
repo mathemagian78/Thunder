@@ -10,6 +10,8 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image("Room", "assets/Room.png");
     //add park bg
     this.load.image("park", "assets/park.png");
+    //add snowy bg
+    this.load.image("snow", "assets/snowy.png");
 
     //add button to ThunderRoom
     this.load.image("toRoom", "assets/roomButton.png");
@@ -17,6 +19,8 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image("carrotTime", "assets/carrotTime.png");
     //add button to park
     this.load.image("parkButton", "assets/parkButton.png");
+    //add button to snow
+    this.load.image("snowButton", "assets/snowButton.png");
 
     //add text font
     this.load.bitmapFont("letters", "assets/font.png", "assets/font.xml");
@@ -66,6 +70,12 @@ export default class PreloadScene extends Phaser.Scene {
       frameHeight: 32
     });
 
+    //add snowman sprite
+    this.load.spritesheet("snowman", "assets/snowman.png", {
+      frameWidth: 40,
+      frameHeight: 40
+    });    
+
     //add musics and sound effects
     this.load.audio("music", "assets/carrotChase.wav");
     this.load.audio("winner", "assets/win.wav");
@@ -83,8 +93,10 @@ export default class PreloadScene extends Phaser.Scene {
     this.scene.launch('MainScene');
     this.scene.launch("dogRoom");
     this.scene.launch("frisbee");
+    this.scene.launch("whackAmole");
+    this.scene.sleep("whackAmole");
     this.scene.sleep("frisbee");
-    this.scene.sleep("dogRoom");
-    this.scene.bringToTop("MainScene");
+    this.scene.sleep("mainScene");
+    this.scene.bringToTop("dogRoom");
   }
 }
