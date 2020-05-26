@@ -24,6 +24,8 @@ export default class PreloadScene extends Phaser.Scene {
 
     //add text font
     this.load.bitmapFont("letters", "assets/font.png", "assets/font.xml");
+    //add snowy font
+    this.load.bitmapFont("snowLetters", "assets/snowyFont.png", "assets/snowyFont.fnt");
 
     //add Thunder sprite
     this.load.spritesheet("Bun", "assets/Thunder2.png", {

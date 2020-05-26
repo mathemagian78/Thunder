@@ -19,7 +19,9 @@ export default class snowman extends Phaser.GameObjects.Sprite {
     }
 
 
-    //destroy if off screen
+    
+
+    
     update(){
     }
 }
