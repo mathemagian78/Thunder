@@ -60,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Thunder/devassets/fox-SWEN-bright.png"
   },
   {
+    "revision": "f38d7c246c961ee84fd2fc51147ac837",
+    "url": "/Thunder/devassets/frisbee.png"
+  },
+  {
     "revision": "5c5eb626426eb420f3e5f4ca68c4cfb0",
     "url": "/Thunder/devassets/grass.png"
   },
@@ -74,6 +78,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c17c1515edf3260716c7812c638e3cb",
     "url": "/Thunder/devassets/pa2.png"
+  },
+  {
+    "revision": "59c0357f84d90e4bb344e5a8a591d917",
+    "url": "/Thunder/devassets/park.png"
+  },
+  {
+    "revision": "6814569ed4dcefaba2ed40a5e803782a",
+    "url": "/Thunder/devassets/parkButton.png"
   },
   {
     "revision": "e0d390c783f610d638e5c34e8005772c",
@@ -96,6 +108,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Thunder/devassets/screenshot_1.png"
   },
   {
+    "revision": "bfba3c27e91bea02b43c2a73125e70d7",
+    "url": "/Thunder/devassets/snowButton.png"
+  },
+  {
+    "revision": "bf83067c40d73877c5bb5291e2ed31bf",
+    "url": "/Thunder/devassets/snowman.png"
+  },
+  {
+    "revision": "c4ac19c291e5b1e4bb46c9301953628f",
+    "url": "/Thunder/devassets/snowy.png"
+  },
+  {
+    "revision": "649356d9a68f2b89f6dee1a909fcdb9c",
+    "url": "/Thunder/devassets/snowyFont.fnt"
+  },
+  {
+    "revision": "60801a5d5eb247de3bff71bb754fbf5d",
+    "url": "/Thunder/devassets/snowyFont.png"
+  },
+  {
     "revision": "078d739f9baf3d5cfbd92c9fcd661f59",
     "url": "/Thunder/devassets/thunderbark.wav"
   },
@@ -108,15 +140,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Thunder/devassets/win.wav"
   },
   {
-    "revision": "06ccfb9567e13bf6b5b5",
-    "url": "/Thunder/devgen.main.91ca411a45998ed9146b.bundle.js"
+    "revision": "bbfb63dc1226758398c0",
+    "url": "/Thunder/devgen.main.1628bb5056410c926fee.bundle.js"
   },
   {
     "revision": "b2512ad1dc1074ce2bf5",
     "url": "/Thunder/devgen.vendors.ed464eb967a0780a06d8.bundle.js"
   },
   {
-    "revision": "7582f8d56c8eef8849931bf2339c4738",
+    "revision": "4c64d7401d16e730ed2cd95b567fcae3",
     "url": "/Thunder/devindex.html"
   },
   {
